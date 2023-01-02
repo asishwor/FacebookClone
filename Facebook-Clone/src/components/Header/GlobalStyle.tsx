@@ -13,6 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     }
     body{
         background-color: var(--section-bg-color);
+        height: 100vh;
+        overflow-y: hidden;
     }
     *{
         margin: 0;
@@ -21,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
 .mainContent{
     max-height: calc(100vh - 61px);
+    overflow-y: auto;
 }
     .active{
     color: var(--primary-color);
@@ -41,5 +44,44 @@ export const GlobalStyle = createGlobalStyle`
 input:focus{
     outline: none;
 }
+.rightAside{
+    max-height: calc(98vh - 61px);
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        height: 5px;
+        width: 9px;
+    }
+    &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    visibility: hidden;
+    border-radius: 30px;
+    }
+    &:hover::-webkit-scrollbar-thumb{
+    visibility : visible;
+
+    }
+}
+.leftaside{
+    max-height: calc(98vh - 61px);
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+width: 9px;
+height: 20px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: darkgray;
+        visibility: hidden;
+        border-radius: 30px;
+    }
+    &:hover::-webkit-scrollbar-thumb{
+        visibility: visible;
+    }
+}
+/*
+::-webkit-scrollbar{
+    width: 10px;
+
+} */
+
 
 `;

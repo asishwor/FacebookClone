@@ -1,8 +1,11 @@
 import { AiFillHeart, AiFillLike, AiOutlineHeart } from "react-icons/ai";
-import { FaRegCommentAlt, FaRegLaughBeam } from "react-icons/fa";
-import { BiLike } from "react-icons/bi";
+import { FaEmber, FaRegCommentAlt, FaRegLaughBeam } from "react-icons/fa";
+import { BiComment, BiLike } from "react-icons/bi";
 import { RiShareForwardLine } from "react-icons/ri";
-const Comment = () => {
+interface commentProp {
+  profile?: string;
+}
+const Comment = ({ profile }: commentProp) => {
   return (
     <div className="mt-3 ">
       <div>
@@ -53,11 +56,23 @@ const Comment = () => {
         </div>
         {/*  WRITE COMMENT  */}
         <div>
-            <div>
-                <div className="profile">
-                    <img src="/Images/profile,jpg" alt="profile" />
-                </div>
+          <div className="mt-2 flex items-center w-[100%]">
+            <div className="profile h-[50px] w-[50px] rounded-[50%] overflow-hidden object-center">
+              <img src={profile} alt="profile" />
             </div>
+            <div className="comment__box ml-2 flex gap-1  flex-grow-[1] text-[var(--body-font-color)] ">
+              <input
+                type="text"
+                placeholder="Write Comment"
+                className="text-sm "
+              />
+              <div className="ml-auto flex">
+                <BiComment />
+                <BiComment />
+                <BiComment />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

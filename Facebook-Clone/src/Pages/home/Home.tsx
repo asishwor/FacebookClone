@@ -5,7 +5,7 @@ import RightAside from "../../components/HomeCompo/RightAside";
 const Home = () => {
   return (
     <div className="container ">
-      <div className="flex  w-[100%]">
+      <div className="flex justify-between  w-[100%]">
         <LeftAside />
         <MainContent />
         <RightAside/>

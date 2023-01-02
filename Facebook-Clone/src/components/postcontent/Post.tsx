@@ -63,10 +63,10 @@ const Post = ({name,image, link,post, postImage}:propType) => {
         </p>
       </div>
       <div className="statusImage cursor-pointer mx-[-15px]">
-        <img src={image} alt="" />
+        <img src={postImage} alt="" />
       </div>
       {/*  comment like section  */}
-      <Comment />
+      <Comment profile={image} />
     </div>
   );
 };

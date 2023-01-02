@@ -8,11 +8,9 @@ const PostStatus = () => {
       <div>
         <div className="p-2 rounded-2xl bg-[var(--white-color)] shadow-2xl">
           <div className="flex">
-            <img
-              src="/Images/profile.jpg "
-              alt=""
-              className="h-[50px] cursor-pointer b object-cover w-[50px] rounded-[50%]"
-            />
+            <div className=" overflow-hidden h-[50px] cursor-pointer b object-cover w-[50px] rounded-[50%]">
+              <img src="/Images/profile.jpg " alt="" />
+            </div>
             <input
               type="text"
               className="flex-1 px-4 rounded-[30px] ml-2 cursor-pointer hover:bg-gray-200 font-bold bg-[var(--section-bg-color)]"

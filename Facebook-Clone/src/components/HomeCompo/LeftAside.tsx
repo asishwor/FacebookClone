@@ -3,18 +3,17 @@ import { Link } from "react-router-dom";
 import { MdOutlineOndemandVideo } from "react-icons/md";
 import { ImUsers } from "react-icons/im";
 import { AiOutlineShop } from "react-icons/ai";
+import ShortCuts from "../Contacts/ShortCuts";
 
 const LeftAside = () => {
   return (
     <>
-      <div className="left__top   my-[30px] w-[300px] lg:block hidden">
+      <div className="left__top leftaside relative z-30  py-[30px] w-[280px] lg:block hidden">
         <div className="profile">
           <div className="profile__image flex hover:bg-gray-200 p-2 rounded-lg items-center font-bold text-[20px] text-[var(--heading-font-color)]">
-            <img
-              src="/Images/profile.jpg"
-              alt="profile image"
-              className="rounded-[50%] object-cover h-[50px] cursor-pointer w-[50px]"
-            />
+            <div className="rounded-[50%] overflow-hidden h-[50px] cursor-pointer w-[50px]">
+              <img src="/Images/profile.jpg" alt="profile image" />
+            </div>
             <div className="name ml-2">Ishwor Khadka</div>
           </div>
           <div className="menuList">
@@ -71,6 +70,7 @@ const LeftAside = () => {
             </ul>
           </div>
         </div>
+        <ShortCuts/>
       </div>
     </>
   );
