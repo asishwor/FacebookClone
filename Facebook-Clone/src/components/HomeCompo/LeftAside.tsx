@@ -4,8 +4,9 @@ import { MdOutlineOndemandVideo } from "react-icons/md";
 import { ImUsers } from "react-icons/im";
 import { AiOutlineShop } from "react-icons/ai";
 import ShortCuts from "../Contacts/ShortCuts";
+import React from "react";
 
-const LeftAside = () => {
+const LeftAside: React.FC = () => {
   return (
     <>
       <div className="left__top leftaside relative z-30  py-[30px] w-[280px] lg:block hidden">
@@ -16,6 +17,7 @@ const LeftAside = () => {
             </div>
             <div className="name ml-2">Ishwor Khadka</div>
           </div>
+          {/*  Menu List */}
           <div className="menuList">
             <ul className="grid mt-2">
               <li>
@@ -70,7 +72,8 @@ const LeftAside = () => {
             </ul>
           </div>
         </div>
-        <ShortCuts/>
+        {/*  Shortcuts */}
+        <ShortCuts />
       </div>
     </>
   );

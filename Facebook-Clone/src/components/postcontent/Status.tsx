@@ -26,7 +26,7 @@ const PostStatus = () => {
 
             <div className="flex-grow-[1] flex justify-center items-center cursor-pointer text-md font-semibold text-[var(--body-font-color)]  rounded-lg hover:bg-[var(--section-bg-color)] py-1 my-2">
               <TfiGallery className="text-[var(--success-color)] text-xl " />
-              <span className="ml-1 ">Live video</span>
+              <span className="ml-1 ">Upload Images</span>
             </div>
           </div>
         </div>

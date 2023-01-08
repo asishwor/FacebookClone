@@ -17,7 +17,7 @@ const HeaderComponents = () => {
     <>
       <Header className="bg-[var(--white-color)] shadow-md h-[56px] ">
         <nav className="flex justify-between text-[var(--body-font-color)] items-center  px-4">
-          <div className="logo relative z-40  flex items-center   " aria-label="facebook-logo">
+          <div className="logo relative z-40  flex items-center w-[200px] overflow-hidden  " aria-label="facebook-logo">
             <Link to={"/"}>
               <FaFacebook
                 className="text-[var(--primary-color)] text-4xl cursor-pointer"
@@ -26,7 +26,7 @@ const HeaderComponents = () => {
             </Link>
             <div
               aria-label="facebook search"
-              className="search flex justify-center items-center rounded-3xl cursor-pointer  border bg-[var(--section-bg-color)] py-[5px] px-[10px] ml-2 "
+              className="search flex  justify-center items-center rounded-3xl cursor-pointer  border bg-[var(--section-bg-color)] py-[5px] px-[10px] ml-2 "
             >
               <label htmlFor="search">
                 <FaSearch className="cursor-pointer" />
