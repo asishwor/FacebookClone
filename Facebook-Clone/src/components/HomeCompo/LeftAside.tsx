@@ -5,11 +5,35 @@ import { ImUsers } from "react-icons/im";
 import { AiOutlineShop } from "react-icons/ai";
 import ShortCuts from "../Contacts/ShortCuts";
 import React from "react";
+import { useSelector } from "react-redux";
+import styled from "styled-components";
 
+export interface toggleProps {
+  toggle: boolean;
+}
+const Aside = styled.div`
+  @media (max-width: 768px) {
+    position: fixed;
+    right: 0;
+    top: 56px;
+    translate: ${(props: toggleProps) => (!props.toggle ? "100%" : "0")};
+    transition: all 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    padding-top: 20px;
+    background-color: #fff;
+    z-index: 250;
+    padding: 20px 15px;
+  }
+`;
 const LeftAside: React.FC = () => {
+  const statusMenu = useSelector((state: any) => state.MenuToggleReducer.leftToggle);
+
   return (
     <>
-      <div className="left__top leftaside relative z-30  py-[30px] w-[280px] lg:block hidden">
+      <Aside
+        toggle={statusMenu}
+        className="left__top leftaside relative z-30  py-[30px] w-[250px] lg:block "
+      >
         <div className="profile">
           <div className="profile__image flex hover:bg-gray-200 p-2 rounded-lg items-center font-bold text-[20px] text-[var(--heading-font-color)]">
             <div className="rounded-[50%] overflow-hidden h-[50px] cursor-pointer w-[50px]">
@@ -74,7 +98,7 @@ const LeftAside: React.FC = () => {
         </div>
         {/*  Shortcuts */}
         <ShortCuts />
-      </div>
+      </Aside>
     </>
   );
 };

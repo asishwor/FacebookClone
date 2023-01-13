@@ -15,8 +15,8 @@ import Post from "../postcontent/Post";
 const MainContent = () => {
   return (
     <>
-      <div className="fixed w-[100%] py-[30px] mb-[30px] mainContent  flex  max-h-[100vh] pb-[50px] lg:left-0 right-0 lg:right-0 ">
-        <div className=" flex-1   sm:max-w-[500px] max-w-[100%] lg:mx-auto  ml-auto flex align-bottom flex-col gap-2 justify-top  sm:px-[20px]">
+      <div className="fixed w-[100%] py-[30px] mb-[30px] mainContent  flex  max-h-[100vh] pb-[50px] top-[75px] lg:left-0 right-0 lg:right-0 ">
+        <div className=" flex-1 px-3   md:max-w-[500px] max-w-[100%] lg:mx-auto  ml-auto flex align-bottom flex-col gap-2 justify-top  sm:px-[20px]">
           <div className="storySlider bg-[var(--white-color)] rounded-2xl w-[100%]  px-0 py-[30px] ">
             <div className="catagory flex justify-between  px-4 items-center border-b pb-1 border-[var(--body-font-color)]">
               <div className="stories font-bold flex-grow-[1] cursor-pointer py-4 hover:bg-[var(--section-bg-color)] rounded-2xl  justify-center text-lg pb-3 text-[var(--body-font-color)] flex items-center gap-[10px]">

@@ -26,10 +26,12 @@ export const GlobalStyle = createGlobalStyle`
     overflow-y: auto;
 }
     .active{
-    color: var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
-    padding-inline: 35px;
-    padding-block: 10px;
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
+        @media (min-width:767pc) {
+            padding-inline: 35px;
+            padding-block: 10px;
+        }
     &:hover{
         background-color: transparent;
         border-radius: 0;

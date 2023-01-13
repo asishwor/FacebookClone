@@ -24,9 +24,14 @@ const PostStatus = () => {
               <span className="ml-1">Live video</span>
             </div>
 
-            <div className="flex-grow-[1] flex justify-center items-center cursor-pointer text-md font-semibold text-[var(--body-font-color)]  rounded-lg hover:bg-[var(--section-bg-color)] py-1 my-2">
+            <div className="flex-grow-[1] flex max-w-[50%] text-center relative justify-center  items-center cursor-pointer text-md font-semibold text-[var(--body-font-color)]  rounded-lg hover:bg-[var(--section-bg-color)]  py-1 my-2">
               <TfiGallery className="text-[var(--success-color)] text-xl " />
-              <span className="ml-1 ">Upload Images</span>
+              <div className="ml-1  " >
+                <input type={"file"} className={" text-transparent w-full cursor-pointer z-[500] absolute top-0 left-0 h-full "}/>
+                <div className="  w-[100%] pointer-events-none cursor-pointer z-34 bg-whitee  top-0 left-0 ">
+                  Upload Images
+                </div>
+              </div>
             </div>
           </div>
         </div>
